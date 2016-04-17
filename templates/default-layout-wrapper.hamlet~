@@ -48,7 +48,7 @@ $newline never
       <div id="main" role="main">
         ^{pageBody pc}
       <footer>
-        Copyright &copy; 2016 Daniel Philippus and NotYetNamed
+        #{appCopyright $ appSettings master}
 
     $maybe analytics <- appAnalytics $ appSettings master
       <script>

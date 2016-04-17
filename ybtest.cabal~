@@ -80,13 +80,13 @@ library
                  , case-insensitive
                  , wai
 
-executable         site
+executable         ybtest
     if flag(library-only)
         Buildable: False
 
     main-is:           main.hs
     hs-source-dirs:    app
-    build-depends:     base, site
+    build-depends:     base, ybtest
 
     ghc-options:       -threaded -rtsopts -with-rtsopts=-N
 
@@ -114,7 +114,7 @@ test-suite test
                 TupleSections
 
     build-depends: base
-                 , site
+                 , ybtest
                  , yesod-test >= 1.5.0.1 && < 1.6
                  , yesod-core
                  , yesod
